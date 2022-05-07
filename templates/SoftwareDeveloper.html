@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %}SoftwareDeveloper{% endblock title %}
+{% block body %}
+<div class="container my-5">
+    <h2>
+        Software Developer
+    </h2>
+    <h4>
+      (JOB ID: 26827)
+  </h4>
+  </div>
+  <div class="container my-4">
+  <form method="post" action="/SoftwareDeveloper">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="name" class="form-label">Full Name</label>
+        <input type="name" class="form-control" id="name" name="name"aria-describedby="name">
+        <div id="name" class="form-text"></div>
+      </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text"></div>
+    </div>
+    <div class="mb-3">
+        <label for="phone" class="form-label">Phone Number</label>
+        <input type="phone" class="form-control" id="phone" name="phone" aria-describedby="phone">
+        <div id="phone" class="form-text"></div>
+      </div>
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Why we select you ?</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" name="desc" rows="3"></textarea>
+      </div>
+      <button type="submit" class="btn btn-secondary">Submit</button>
+    </form>
+  </div> 
+{% endblock body %}
